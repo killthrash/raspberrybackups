@@ -8,3 +8,5 @@ I use this script daily to back up my Windows SMB share to two DAS drives connec
 - Everything is logged and a summary is emailed
 
 Sometimes I will do a simple drag-and-drop to the Primary hard drive for files I want backed up. This is why the second rsync mirrors the entire primary hard drive. The primary backup hard drive has my Windows share, and various other files I've hand-selected.
+
+I've done a ton of troubleshooting with rsync to reduce the backup time. You'll see a lot of folder exclusions in the rsync command. This is because Windows has annoying symbolic links that pop up in SMB sharing, and it causes recursion loops with rsync. You have to exclude these symbolic links, or rsync will fail.
