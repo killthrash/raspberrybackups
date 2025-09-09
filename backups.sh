@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Configuration - EXACTLY AS YOU SPECIFIED
+# Configuration
 WINDOWS_MOUNT="/mnt/[WINDOWS_SHARE]"              # Windows share folder "[WINDOWS_SHARE]"
 PRIMARY_BACKUP="/mnt/[PRIMARY_DRIVE]"           # Primary drive
 SECONDARY_BACKUP="/mnt/[SECONDARY_DRIVE]"         # Secondary drive (mirror of primary)
@@ -293,4 +293,5 @@ fi
 
 log_message "################################################################################"
 send_notification "Backup Completed Successfully" "Backup process finished successfully. Log: $LOG_FILE$health_summary"
+
 exit 0
